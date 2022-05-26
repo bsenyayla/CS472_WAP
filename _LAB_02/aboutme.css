@@ -1,0 +1,32 @@
+body{
+
+    background-color: rgba(250, 219, 236, 0.783);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+p{
+    color: rgb(26, 26, 152);
+
+}
+
+h1,h2,h3 {
+    color: blue;
+    
+}
+
+.lastCourse{
+    color: rgb(255, 123, 0);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.ImpText{
+    color: rgb(255, 123, 0);
+    background-color: rgb(24, 71, 98);
+}
+
+.imgBackSide{
+    
+    background-color: rgb(3, 26, 40);
+}
