@@ -31,3 +31,38 @@ h1 > span{
     text-align: left;
     text-decoration: underline;
  }
+
+ ul li{
+    list-style-image: url("./images/pie_icon.gif");
+}
+
+footer p{
+    width: 40%;
+    text-align: right;
+}
+
+.comments p {
+    width: 80%;
+    background-color: rgba(234, 247, 62, 0.9);
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: left;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color:rgba(200,200,200,0.9);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.inline-block{
+    display: inline-block;
+}
