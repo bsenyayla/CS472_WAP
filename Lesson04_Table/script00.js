@@ -1,10 +1,6 @@
 console.log("hello javascript");
 
 
-
-
-
-
 /* JAva 2 */
 console.log("External File");
 var i=9;
