@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src https://*; child-src 'none';">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/master.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="js/main.js"></script>
@@ -24,13 +26,13 @@
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" >
               </div>
 
               <div class="mb-3">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
               
-                  <input type="password" class="form-control" id="inputPassword">
+                  <input type="password" class="form-control" id="inputPassword" pattern="([a-z]{1,} + [A-Z]{1,})" required>
                 
               </div>
 
