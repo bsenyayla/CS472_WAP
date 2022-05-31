@@ -1,0 +1,141 @@
+/**css for webform2 **/
+header{
+    background-color: black;
+    height: 50px; 
+}
+footer{
+    background-color: black;
+    padding: 20px 20px 0px 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 50px; 
+}
+form{
+    height: 60%;
+    width: 85%;
+    margin-left: 10%;
+}
+input{
+    height: 50px;
+}
+select{
+    height: 50px;
+}
+div.column{
+    width: 50%;
+}
+form div.button{
+    float: right;
+    margin-right: 55px;
+}
+button#addProduct{
+    border: 2px solid skyblue;
+    border-radius: 5px;
+    background-color: white;
+    color:skyblue;
+    padding: 10px;
+    margin: 10px;
+}
+select{
+    width: 90%;
+    border-radius: 5px;
+}
+button#reset{
+    border: 2px solid navy;
+    border-radius: 5px;
+    background-color: white;
+    color:navy;
+    margin: 10px;
+    padding: 10px;
+}
+a#cancel{
+    border: 2px solid orange;
+    border-radius: 5px;
+    background-color: white;
+    color:orange;
+    margin: 10px;
+    padding: 10px;
+}
+form div{
+    left: 20px;
+    font-size: large;
+    margin-top: 20px;
+}
+form label {
+    font-size: large;
+}
+form input{
+    size: large;
+    margin: auto;
+    width: 90%;
+    border-color: gray;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+::placeholder{
+    padding-left: 10px;
+}
+input#check{
+    width: auto;
+}
+p{
+    font-size: small;
+    color: gray;
+}
+button{
+    background-color: rgb(33, 178, 235);
+    font-family:'Lucida Sans', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.navbar{
+    position: relative;
+    background-color: rgb(33, 178, 235);
+    height: 50px; 
+    color: white;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+    z-index: -1;
+    border-top: 3px solid white;
+}
+.navbar span{
+    margin-left: 20px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+li{ 
+    padding-top: 10px;
+    display: inline-flex;  
+    border-left: 2px solid white;
+    width: 200px;
+    overflow: hidden;
+}
+li a {
+    color: white;
+    padding-left: 55px;
+}
+span.right{
+    margin-left: 200px;
+    padding-left: 250px;
+ }
+.navbar button{
+    background-color: gainsboro;
+    color: black;
+    margin-right: 10px;
+    text-align: right;
+    z-index: -1;
+}
+h2{
+    margin-left: 7%;
+    margin-top: 2%;
+}
+col.left{
+    width: 40%;
+}

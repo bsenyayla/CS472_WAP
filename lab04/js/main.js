@@ -7,9 +7,23 @@ function openPage(pageName,elmnt,color) {
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].style.backgroundColor = "";
+      tablinks[i].style.color='white';
+      if("News"==pageName && i==1)
+      {
+        tablinks[i].style.color='black';
+      }
+  
+
     }
+
+    
+
+
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
+
+   
+
   }
   
   // Get the element with id="defaultOpen" and click on it

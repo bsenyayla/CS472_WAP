@@ -33,8 +33,22 @@ body, html {
   height: 100%;
 }
 
+.tabInside{
+  background-color: rgb(215, 141, 45);
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
 #Home {background-color: red;}
-#News {background-color: green;}
+#News {background-color: rgb(255, 255, 255);
+    color: black;
+}
+
 #Contact {background-color: rgb(252, 252, 253);
 margin: 0;
 padding: 0;
