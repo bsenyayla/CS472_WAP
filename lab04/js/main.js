@@ -8,10 +8,7 @@ function openPage(pageName,elmnt,color) {
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].style.backgroundColor = "";
       tablinks[i].style.color='white';
-      if("News"==pageName && i==1)
-      {
-        tablinks[i].style.color='black';
-      }
+
   
 
     }

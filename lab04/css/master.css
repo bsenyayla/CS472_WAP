@@ -44,11 +44,9 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: red;}
-#News {background-color: rgb(255, 255, 255);
-    color: black;
-}
 
+#Home {background-color: red;}
+#News {background-color: green;}
 #Contact {background-color: rgb(252, 252, 253);
 margin: 0;
 padding: 0;
