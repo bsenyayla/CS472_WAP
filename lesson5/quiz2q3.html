@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script> 
+        $(function(){ 
+            $("#divMenu").load("menu.html") 
+        });
+    </script>
+</head>
+<body>
+    <div id="divMenu"></div>
+
+    <form action="/action_page.php">
+    <fieldset><legend>Personalia</legend>
+        <label>Full Names*</label><br>
+        <input type="text" ><br>
+        <label>Date of Birth*</label><br>
+        <input type="date" >
+    </fieldset><br>
+    <fieldset><legend>Academic Enrollment Data</legend>
+        <label>Student ID*</label><br>
+        <input type="text" required placeholder="000-XX-XXXX" 
+                pattern="^000-(\d{2})-(\d{4})$"><br>
+
+        <label for="texttt">3 karakter Metin:</label>
+        <input type="text" id="texttt" name="texttt"
+        pattern="[A-Za-z]{3}" title="texttt" ><br><br>
+
+        <label for="SSN">SSN:</label>
+        <input type="text" id="SSN" name="SSN"
+        pattern="^0(\d{3})-(\d{2})-(\d{2})$" title="SSN" ><br><br>
+
+        <label for="tele">Tele:</label>
+        <input type="text" id="tele" name="tele"
+        pattern="^05(\d{9}) (\d{3})$" title="tele" ><br><br>                
+    </fieldset><br>
+
+    <input type="button" value="Cancel">
+    <input type="reset" value="Reset">
+    <input type="submit" value="Register">
+    </form>
+
+   <br><br><br><img src="img/qz2_d2_q5.png" width="800">
+
+</body>
+</html>

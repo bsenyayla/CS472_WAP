@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script> 
+        $(function(){ 
+            $("#divMenu").load("menu.html") 
+        });
+    </script>
+
+
+</head>
+<body>
+    <div id="divMenu"></div>
+    <h1>Q5</h1>
+<img src="img/P1Q6.PNG" width="400">
+<script>
+const tripleEyeFuncs=[];
+
+for(var i=0; i <= 5 ;i++){
+    tripleEyeFuncs[i]=function(){
+        return i * 3;
+    }
+}
+
+console.log("0:" + tripleEyeFuncs[0]());
+console.log("1:" + tripleEyeFuncs[1]());
+console.log("2:" + tripleEyeFuncs[2]());
+console.log("3:" + tripleEyeFuncs[3]());
+console.log("4:" + tripleEyeFuncs[4]());
+
+</script>
+
+
+</body>
+</html>
