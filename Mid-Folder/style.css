@@ -1,0 +1,57 @@
+html {
+    position: relative;
+  }
+  
+  body {
+    margin-bottom: 50px;
+  }
+  nav {
+    background-color: #2066c2;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(212, 211, 211);
+  }
+  
+  tr.datarow {
+    cursor: pointer;
+  }
+  
+  img {
+    float: right;
+    margin: 0px 0px 15px 20px;
+  }
+  
+  .clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17d4fe;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+  }
+  li {
+    border-left: white 1px solid;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .Headlabel {
+    background-color: #045ccf;
+    border: none;
+    position: absolute;
+    right: 30px;
+    position: absolute;
+    color: white;
+  }
+
+  p{
+      opacity: 90%;
+  }
+  
+  

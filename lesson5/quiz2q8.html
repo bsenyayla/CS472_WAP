@@ -15,34 +15,18 @@
     </script>
 </head>
 <body>
-    <div id="divMenu"></div>
-    <h1>SCOPE - HOISTING</h1>
-
-<script>
-x=17;
-var a=50;
-var b=100;
-var c= function(a,b,c){
-    document.write(x + "<br>");
-    document.write(a + "<br>");
-
-    var f=function(a,b,c){
-        b=a;
-        document.write(b + "<br>");
-        b=c;
-        var x=15;
+function filterLongWords(words,i){
+    const longwords=[];
+    for(const word of words){
+        if(word.lenght >i){
+            longwords.push(word);
+        }
     }
-    f(a,b,c);
-    document.write(b+"<br>");
-    var x=100;
+    return longwords;
 }
 
-c(18,19,100);
-document.write(b + "<br>");
-document.write(x + "<br>");
-
 </script>
-<img src="img/P1Q8.PNG" width="400">
+
 
 </body>
 </html>

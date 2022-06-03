@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIU Student Government - Voter Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="./css/pie_icon.gif">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="mid.js"></script>
+    <title>Bahadir SENYAYLA - 613769</title>
+
+</head>
+<body>
+    <header>
+        <h1>MIU Student Government</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="./voter-reg-form.html">Voter Registration Form</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1 id="pageTitle">Voter Registration Form</h1>
+        <hr>
+        <div style="margin-bottom: 1em;">
+            Note: All data fields are required.
+        </div>
+        <form onsubmit="TakeValues();">
+            <div class="form-row">
+                <div>
+                    <label for="voterNo">Voter Number</label>
+                </div>
+                <div>
+                    <input autofocus class="text-field" type="text" name="voterNo" id="voterNo" 
+                    pattern="[0-9]{10}" 
+                    placeholder="XXXXXXXXXX"
+                    required
+                    title="please enter 10 digit number.">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <div>
+                        <label for="firstName">First Name</label>
+                    </div>
+                    <div>
+                        <input class="text-field" type="text" name="firstName" id="firstName" 
+                        required
+                        title="Please enter First Name."
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <div>
+                        <label for="lastName">Last Name</label>
+                    </div>
+                    <div>
+                        <input class="text-field" type="text" name="lastName" id="lastName" 
+                        required
+                        title="Please enter Last Name."
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="levelOfStudy">Level of Study</label>
+                </div>
+                <div>
+                    <select name="levelOfStudy" id="levelOfStudy" 
+                    required
+                    title="You must choose one option!"
+                    >
+                        <option value=""></option>
+                        <option value="graduate">Graduate</option>
+                        <option value="undergraduate">Undergraduate</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div id="btnPanel">
+                    <input class="btn-basic" type="reset" value="Reset">
+                    <input class="btn-basic" type="submit" value="Register">
+                </div>
+            </div>
+        </form>
+    </main>
+
+<footer>
+    <div>
+<h6>Bahadir SENYAYLA :: WAP</h6>
+
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
