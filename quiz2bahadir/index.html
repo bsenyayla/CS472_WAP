@@ -7,21 +7,24 @@
     <title>Document</title>
 
     <script>
-var scopeAA=10;
 
-var xxfunc= function XFunc()
-{
-    var spoceBB=22;
 
-    var yyfunc=function YFunc(){
-        var spoceCC=33;
-
+var foo=1;
+function bar(){
+   console.log("if içi "  + foo);
+   if(foo)
+   {
+        console.log("if içi "  + foo);
+   }
+   
+    if(!foo){
+        var foo=10;
     }
+    //alert(foo);
+    console.log("Foo:" + foo);
 
 }
-
-console.log(xxfunc.spoceBB);
-
+bar();
 
 
 
