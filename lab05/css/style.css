@@ -1,0 +1,9 @@
+body{
+    background-color: skyblue;
+}
+#dateAndTime{
+    margin-top: 20%;
+    text-align: center;
+    font-size: 100px;
+    color:rgb(53, 207, 32);
+}
