@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/cerulean/bootstrap.min.css" integrity="sha512-CVn5BJ6vue0EG9CDO6yfg3hOvzQ43xEXOSUEkUtiV3pDy2S7O0saUZ0vbDkZYVX30NvqLLZo51JBzUyreGyqvg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="js/mid.js"></script>
+</head>
+<body>
+
+<header>    
+</header>
+
+<main>
+    <div class="container">
+        <h1>Census Form</h1>
+        <hr>
+        <form id="censusForm" method="post">
+            <div class="row census-form-row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:*</label>
+                        <input required class="form-control" type="text" name="fullName" id="fullName">
+                        <small>Enter your Full Name as in your Government-issued ID</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row census-form-row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="citizenId">Citizen ID:*</label>
+                        <input placeholder="XXXXXXXXXX" pattern="\d{10}" required class="form-control" type="text" name="citizenId" id="citizenId">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="ssn">Social Sec No:*</label>
+                        <input placeholder="XXX-XX-XXXX" pattern="\d{3}-\d{2}-\d{4}" required class="form-control" type="text" name="ssn" id="ssn">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row census-form-row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="state">State:*</label>
+                        <select required name="state" id="state" class="form-control">
+                            <option value="">Select state...</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="New Mexico">New Mexico</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Is a Senior Citizen?:*</label>
+                        <div>
+                            <input value="Yes" required type="radio" name="radBtnSnrCitizen" id="radBtnSnrCitizenYes">
+                            <label for="radBtnSnrCitizenYes">Yes</label>
+                            <input value="No"  required type="radio" name="radBtnSnrCitizen" id="radBtnSnrCitizenNo">
+                            <label for="radBtnSnrCitizenNo">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row census-form-row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                    <input class="btn btn-secondary"  type="reset" value="Reset">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+
+        
+    </div>
+</main>
+
+
+<footer>
+</footer>
+
+
+<script> 
+    $(function(){ 
+        $("header").load("menu.html") 
+        $("footer").load("footer.html") 
+    });
+</script>
+    
+</body>
+</html>
