@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/cerulean/bootstrap.min.css" integrity="sha512-CVn5BJ6vue0EG9CDO6yfg3hOvzQ43xEXOSUEkUtiV3pDy2S7O0saUZ0vbDkZYVX30NvqLLZo51JBzUyreGyqvg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+console.log("== Reduce ==========================================================================");
+    const message =["javaScript ","is " ,"fun."];
+    function joinStrings(accumulator,currentValue){
+        return accumulator + currentValue;
+    }
+
+    console.log(joinStrings("javaScript ","is "));
+
+    let joinedString=message.reduce(joinStrings);
+    console.log(joinedString);
+
+
+    var result=message.reduce((m,n) => m+n);
+    console.log('Result:' + result);
+
+console.log("== Arrow Function-Reduce ==========================================================================");
+    const numbers = [9, 1, 1, 1, 1];    
+
+    // using arrow function
+    let summation = numbers
+    .reduce((accumulator, currentValue) => accumulator - currentValue
+    );
+    console.log(summation); // 21
+    
+    console.log("== Remove Dublicate items from array ==========================================================================");    
+    let ageGroup = [18, 21, 1, 1, 51, 18, 21, 5, 18, 7, 10];
+   
+    let uniqueAgeGroup = ageGroup.reduce(function (accumulator, currentValue) {
+        if (accumulator.indexOf(currentValue) == -1) {
+            accumulator.push(currentValue);
+        }
+
+        return accumulator;
+    }, []);
+    console.log("uniqueAgeGroup: " + uniqueAgeGroup);
+
+var yaz=(x)=>console.log(x);    
+
+yaz("== Lambda Function ==========================================================================");
+
+const longWord2= (words,i)=> words.filter(word => word.length>i);
+
+yaz(
+    longWord2(["bahadir","bir","iki"],3)
+);
+
+
+const longWords1=function(words,i){
+    return words.filter(word=> word.length >i);
+};
+
+yaz(
+    longWords1(["bahadir","bir","iki"],3)
+);
+
+yaz("== Reverse Function ==========================================================================");
+const reverseFunc=function(ss){
+    let retVal='';
+    for(let i=ss.length-1; i >= 0;i--){
+        retVal+=ss.charAt(i);
+    }
+
+    return retVal;
+}
+
+yaz(reverseFunc("Şenyayla"));
+
+
+yaz("== Regex Function ==========================================================================");
+function isVowel(letter){
+    let pattern=/[aeiou]/;
+    return pattern.test(letter);
+}
+
+yaz("isVowel:"  + isVowel("e"));
+
+</script>
+</head>
+<body>
+
+<header>    
+</header>
+
+<main>
+    <div class="container">
+        <h1>Js2 - Reduce - Map -Filter</h1>
+        <hr>
+        Result:<br>
+        <textarea id="resultText" rows="9" cols="100%"></textarea>
+    </div>
+</main>
+
+
+<footer>
+</footer>
+    <script> 
+        $(function(){ 
+            $("header").load("menu.html") 
+            $("footer").load("footer.html") 
+        });
+    </script>    
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MidTerm :: BAHADIR SENYAYLA</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/cerulean/bootstrap.min.css" integrity="sha512-CVn5BJ6vue0EG9CDO6yfg3hOvzQ43xEXOSUEkUtiV3pDy2S7O0saUZ0vbDkZYVX30NvqLLZo51JBzUyreGyqvg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="js/mid.js"></script>
+</head>
+<body>
+
+<header>    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">CS472 - WAP Bank</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="new-account-form.html">Open a new Account</a>
+              </li>
+            </ul>
+    
+            <div class="d-flex">
+                <span id="spnMenuInfo">Hello, New Customer</span>
+            </div>
+    
+          </div>
+        </div>
+      </nav>
+</header>
+
+<main>
+    <div class="container">
+        <h2>New Account Form</h2>
+        <hr>
+        <form id="censusForm" method="post">
+            <div class="row census-form-row">
+                <label></label>
+                <fieldset class="form-group">
+                    <legend>Account Ownership Type*</legend>
+                </fieldset>  
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input value="Personel" required type="radio" name="radBtnAccountOwnerType" id="radBtnAccountOwnerTypeP">
+                        <label for="radBtnAccountOwnerTypeP">Personal Account</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input value="Corporate"  required type="radio" name="radBtnAccountOwnerType" id="radBtnAccountOwnerTypeC">
+                        <label for="radBtnAccountOwnerTypeC">Corporate Account</label>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row census-form-row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <fieldset class="form-group">
+                            <legend>Customer Information</legend>
+                            <label for="fullName">Full Name*</label>
+                            <input required class="form-control" type="text" name="fullName" id="fullName">
+                            
+                            <label for="address">Adress*</label>
+                            <textarea class="form-control"  name="address" id="address" rows="3" 
+                            required
+                            title="please fill in the address field!"></textarea>
+                        </fieldset>   
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row census-form-row">
+                <fieldset class="form-group">
+                    <legend>Account Information</legend>
+                </fieldset>                   
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="accountNumber">Account Number*</label>                           
+                            <input placeholder="AC-XXX-XXXX" pattern="AC-\d{3}-\d{4}"  class="form-control" type="text" name="accountNumber" id="accountNumber" 
+                                    required
+                                    title="Please fill Account Number,Account number begin biggest carachter AC"
+                            >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="typeofaccount">Type Of Account*</label>
+                            <select required name="typeofaccount" id="typeofaccount" class="form-control">
+                                <option value="">Select the type of account...</option>
+                                <option value="Checking">Checking</option>
+                                <option value="Savings">Savings</option>
+                                <option value="Loan">Loan</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+
+            <br>
+            <div class="row census-form-row">
+                <div class="col-md-6">
+                    <input class="btn btn-secondary"  type="reset" value="Reset">
+                    <input class="btn btn-primary" type="submit" value="Create New Account">
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </form>
+
+        
+    </div>
+</main>
+
+
+<footer>
+</footer>
+
+
+<script> 
+    $(function(){ 
+        //$("header").load("menu.html") 
+        $("footer").load("footer.html") 
+    });
+</script>
+    
+</body>
+</html>

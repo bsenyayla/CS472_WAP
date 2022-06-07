@@ -1,0 +1,43 @@
+#imglogo {
+    width: 100%;
+}
+
+h2{
+    color: black;
+}
+#spnMenuInfo{
+    color: white;
+    margin: 0 1em 0 1em;
+}
+
+
+footer{
+  height: 50px;
+  background-color: gainsboro;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 8vh;
+}
+
+
+
+footer > section {
+    display: flex;
+    width: 50%;
+}
+footer > section.footerright {
+    justify-content: end;
+}
+
+
+
+footer > section.footerright span {
+    margin: 0 1em 0 1em;
+}
+footer > section.footerleft span {
+    margin: 0 1em 0 1em;
+}
+
