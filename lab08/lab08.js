@@ -1,13 +1,13 @@
-
+/*Module Function -Method*/
         var count =(
             function(){
                 var counter=0;
                 var q6ResultArea=document.getElementById("q6ResultArea");
-
+                var adderConst=1;
                 add=()=>{
                             
-                            counter++;
-                            console.log("Add runned...");
+                            counter+=adderConst;
+                            console.log("Add runned..." + counter);
                             privateWriteTextArea("Add runned...");
                         }
         
@@ -20,6 +20,11 @@
                             console.log("Counter Value:" + counter);
                             privateWriteTextArea("Counter Value:" + counter);
                           }
+
+                make_adder=(xx)=>{
+                    adderConst=xx;
+                    console.log("MakeAdder:" + xx + " adderConst:" +adderConst);
+                }                          
         
                 function info(){
                     console.log("info...");
@@ -39,7 +44,8 @@
                     add:add,
                     reset:reset,
                     print:print,
-                    info:info
+                    info:info,
+                    make_adder:make_adder
                 }
         
         
@@ -51,8 +57,14 @@
         count.add();
         count.add();
         count.add();
+        
+
         count.print();
         count.reset();    
+        
+        count.make_adder(3);
+        count.add();
+        count.add();
         count.print();
             count.info();
         count.privateFunction; //
