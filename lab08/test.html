@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer lang="javascript">
+        var count =(
+            function(){
+                var counter=0;
+               
+                add=()=>{
+                            counter++;
+                            console.log("Add runned...");
+                            
+         
+                            document.getElementById("q6ResultArea").innerText="sdfsdf";
+                           
+        
+                        }
+        
+                reset=()=>{
+                            counter=0;
+                            console.log("Reset runned...");
+                            }
+                print=()=>console.log("Counter Value:" + counter);
+        
+        
+        
+        
+                return {
+                    add:add,
+                    reset:reset,
+                    print:print
+                }
+        
+        
+            })();
+        
+            
+        count.add();
+        count.print();
+        count.add();
+        count.add();
+        count.add();
+        count.print();
+        count.reset();    
+        count.print();
+        
+        
+        
+        
+            </script>
+
+<script>
+    function myFunction() {
+    
+      
+      document.getElementById("q6ResultArea").innerText="sdfsdf";
+    }
+    </script>
+</head>
+<body>
+
+
+
+<textarea id="q6ResultArea" cols="100" rows="9" title="Result">d</textarea>
+
+
+<button type="button" onclick="myFunction()">Try it</button>
+<textarea id="myTextarea">
+    342 Alvin Road
+    Ducksburg</textarea>
+
+
+</body>
+
+</html>

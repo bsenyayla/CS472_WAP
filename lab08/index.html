@@ -5,8 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script defer src="lab08.js"></script>
 </head>
 <body>
     LAB 8
+<h1>Question 6</h1>
+<img src="img/q6.png" height="220px"><br>
+<textarea id="q6CodeArea" cols="90" rows="15" title="Code">
+
+    
+    var count =(
+        function(){
+            var counter=0;
+            var q6ResultArea=document.getElementById("q6ResultArea");
+
+            add=()=>{
+                        counter++;
+                        console.log("Add runned...");
+                        privateWriteTextArea("Add runned...");
+                    }
+    
+            reset=()=>{
+                        counter=0;
+                        console.log("Reset runned...");
+                        privateWriteTextArea("Reset runned...");
+                        }
+            print=()=>{
+                        console.log("Counter Value:" + counter);
+                        privateWriteTextArea("Counter Value:" + counter);
+                      }
+    
+            function info(){
+                console.log("info...");
+            }
+    
+            function privateFunction(){
+                console.log("i m private function.");
+            }
+    
+            function privateWriteTextArea(ss){                   
+                q6ResultArea.innerHTML+=ss + "\n" ;
+            }
+    
+            return {
+                add:add,
+                reset:reset,
+                print:print,
+                info:info
+            }
+    
+    
+        })();
+    
+        
+    count.add();
+    count.print();
+    count.add();
+    count.add();
+    count.add();
+    count.print();
+    count.reset();    
+    count.print();
+        count.info();
+    count.privateFunction; //
+  
+             
+</textarea>
+<textarea id="q6ResultArea" cols="90" rows="15" title="Result"></textarea>
+
+<p>Note:Private variables are used in the code.
+    Private methods are used.
+    arrow function is used.</p>
+
+<hr>
+<h1>Question 7</h1>
+<img src="img/2022-06-09_01-03-55.png" height="48px"><br>
+<p>Note:A free variable is simply a variable which is not declared inside a given function, but is used inside it..
+    you can see line 26 in lab08.js file
+</p>
+
+<h1>Question 8</h1>
+<img src="img/2022-06-09_01-03-55.png" height="48px"><br>
+<p>Note:A free variable is simply a variable which is not declared inside a given function, but is used inside it..
+    you can see line 26 in lab08.js file
+</p>
+
 </body>
+
+
 </html>
