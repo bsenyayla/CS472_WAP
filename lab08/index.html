@@ -8,50 +8,54 @@
     <script defer src="lab08.js"></script>
 </head>
 <body>
-    LAB 8
-<h1>Question 6</h1>
+<h1>LAB 8 </h1>  
+<h2>Question 6</h2>
 <img src="img/q6.png" height="220px"><br>
 <textarea id="q6CodeArea" cols="90" rows="15" title="Code">
-
-    
+    /*Module Function -Method*/
     var count =(
         function(){
             var counter=0;
             var q6ResultArea=document.getElementById("q6ResultArea");
-
+            var adderConst=1;
             add=()=>{
-                        counter++;
-                        console.log("Add runned...");
-                        privateWriteTextArea("Add runned...");
+                        counter+=adderConst;
+                        privateWriteTextArea("Add runned..." + counter);
                     }
     
             reset=()=>{
                         counter=0;
-                        console.log("Reset runned...");
                         privateWriteTextArea("Reset runned...");
                         }
             print=()=>{
-                        console.log("Counter Value:" + counter);
                         privateWriteTextArea("Counter Value:" + counter);
                       }
+
+            make_adder=(xx)=>{
+                adderConst=xx;
+                privateWriteTextArea("MakeAdder:" + xx + " adderConst:" +adderConst);
+            }                          
     
             function info(){
-                console.log("info...");
+                freeVariable="i m free variable";
+                privateWriteTextArea("info..." + freeVariable);
             }
     
             function privateFunction(){
-                console.log("i m private function.");
+                privateWriteTextArea("i m private function.");                
             }
     
             function privateWriteTextArea(ss){                   
                 q6ResultArea.innerHTML+=ss + "\n" ;
+                console.log(ss);
             }
     
-            return {
+            return { //public & private ayarları buradan yapılıyor
                 add:add,
                 reset:reset,
                 print:print,
-                info:info
+                info:info,
+                make_adder:make_adder
             }
     
     
@@ -63,11 +67,20 @@
     count.add();
     count.add();
     count.add();
+    
+
     count.print();
     count.reset();    
+    
+    count.make_adder(3);
+    count.add();
+    count.add();
     count.print();
         count.info();
-    count.privateFunction; //
+    count.privateFunction; 
+
+
+    
   
              
 </textarea>
@@ -78,18 +91,14 @@
     arrow function is used.</p>
 
 <hr>
-<h1>Question 7</h1>
+<h2>Question 7</h2>
 <img src="img/2022-06-09_01-03-55.png" height="48px"><br>
 <p>Note:A free variable is simply a variable which is not declared inside a given function, but is used inside it..
     you can see line 26 in lab08.js file
-</p>
+</p><hr>
 
-<h1>Question 8</h1>
-<img src="img/2022-06-09_01-03-55.png" height="48px"><br>
-<p>Note:A free variable is simply a variable which is not declared inside a given function, but is used inside it..
-    you can see line 26 in lab08.js file
-</p>
-
+<h2>Question 8</h2><p>Note:The relevant method has been added to the lab08.js file.</p><hr>
+<h2>Question 9</h2><p>Note:In the code I wrote, no variables were defined globally. All methods and variables were made to be used in the module..</p><hr>
 </body>
 
 
