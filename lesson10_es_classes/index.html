@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson10-ES Classes and ES Modules</title>
+    <!--script src="./js/app.js"></script>
+    <script type="module" src="./js/main.js"></script-->
+
+    <script>
+class User{
+    constructor(name){
+        this.name=name;
+    }
+
+    sayHi(){
+        alert(this.name);
+    }
+
+}
+
+User.prototype.hello=function(){
+    alert("hello");
+}
+
+
+let  user=new User("Bahadır");
+user.sayHi();
+user.hello();
+
+
+//============================================================================================================
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Lesson10 - ES Classes and ESModules</h1>
+</body>
+</html>

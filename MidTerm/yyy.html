@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict"
+
+        console.log("Çalışıyorum");
+        const personal={
+            name:"Bahadır",
+            sureName:"ŞENYAYLA",
+            Info: function(){
+                console.log("Info=>Name:" + this.name );
+            }
+        };
+
+        console.log("Name:" + personal.name +   " SureName:"+ personal.sureName);
+
+        for(let dr in personal){
+            console.log("Key:" + dr + " Value:" + personal[dr]);
+        }
+
+        personal.Info();
+
+        var x1 = new Object();   // Yeni Object nesnesi
+        var x2 = new String();   // Yeni String nesnesi
+        var x3 = new Number();   // Yeni Number nesnesi
+        var x4 = new Boolean();  // Yeni Boolean nesnesi
+        var x5 = new Array();    // Yeni Array nesnesi
+        var x6 = new RegExp();   // Yeni RegExp nesnesi
+        var x7 = new Function(); // Yeni Function nesnesi
+        var x8 = new Date();     // Yeni Date nesnesi
+
+  console.log("X8=" + x8);
+
+  var x1 = {};            // Yeni object
+  var x2 = "";            // Yeni temel string türü
+  var x3 = 0;             // Yeni temel number türü
+  var x4 = false;         // Yeni temel boolean türü
+  var x5 = [];            // Yeni array nesnesi
+  var x6 = /()/;          // Yeni regexp nesnesi
+  var x7 = function() {}; // Yeni function nesnesi
+    
+
+
+  var kisi = {adi:"Yusuf", soyAdi:"SEZER", yas:75};
+  var x = kisi;
+  x.yas = 30;
+  console.log(kisi.yas);  // 75 mi 30 mu?
+    </script>
+    
+</head>
+<body>
+    <ul>
+        <li><a href="yyy.html">Step 1 JS Objects Types Samples</a></li>
+        <li><a href="xxx.html">Step 2 JS </a></li>
+        <li><a href="zzz.html">Step 3 Kalıtım</a></li>
+    </ul>
+
+    <h1>Step 1 JS Objects Types Samples</h1>
+    <div id="div00">
+        Bahadır ŞENYAYLA
+    </div>
+</body>
+</html>

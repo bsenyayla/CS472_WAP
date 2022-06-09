@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict";
+          function Hayvan(vlAd) {
+              this.ad=vlAd;
+            this.renk = ["siyah", "beyaz"];
+            this.tur=["etcil","otcul","hem etcil hem otçul"];
+          }
+
+          function Kedi() {
+            Hayvan.call(this,"Tekir Fethmi");
+            //Hayvan.call(this);     // Constructor stealing - Yapıcı çalma
+            //Hayvan.apply(this);  // Constructor stealing 
+          }
+        
+          var vKedi = new Kedi();
+          vKedi.renk.push("sarı");
+          console.log(vKedi.renk);  // siyah, beyaz, sarı
+        
+          var wKedi = new Kedi();
+          
+          console.log(wKedi);  // siyah, beyaz
+
+
+console.log("======================================================================================");
+
+function Nokta(x, y) {
+    this._x = x;  // _x private değişken
+    this._y = y;  // _y private değişken
+    this.getX = function() { return this._x; }; // dolaylı erişim
+    this.setX = function(x) { this._x = x; };   // dolaylı değer değiştirme
+    this.getY = function() { return this._y; }; // dolaylı erişim
+    this.setY = function(y) { this._y = y; };   // dolaylı değer değiştirme
+  }
+  var xNokta = new Nokta(0, 0);
+  xNokta.setX(10);
+  console.log("X:" + xNokta.getX());
+  xNokta.setY(20);
+  console.log("Y:" + xNokta.getY());
+  console.log("X=>" +xNokta._x);  // 10
+  console.log("Y=>"+ xNokta._y);  // 20
+xNokta._x=9;
+
+console.log("X=>" +xNokta._x);  // 10
+
+
+function XPoint(x, y) {
+    this._u;
+    var _x = x;  // _x private değişken
+    var _y = y;  // _y private değişken
+    let _w=0;
+    this.getX = function() { return _x; }; // dolaylı erişim
+    this.setX = function(x) { _x = x; };   // dolaylı değer değiştirme
+    this.getY = function() { return _y; }; // dolaylı erişim
+    this.setY = function(y) { _y = y; };   // dolaylı değer değiştirme
+
+    this.getW=function(){
+      return _w;
+    }
+}
+
+  var objx = new XPoint(0, 0);
+  objx.setX(10);
+  console.log(objx.getX());
+  objx.setY(20);
+  console.log(objx.getY());
+  console.log("X:" + objx._x);  // undefined
+  console.log("Y:" + objx._y);  // undefined
+    objx._u=3;
+    console.log("U:" + objx._u);  // undefined
+    console.log("W:" + objx._w);  // undefined
+    
+    console.log("W get:" + objx.getW());
+</script>
+</head>
+<body>
+    <ul>
+        <li><a href="yyy.html">Step 1 JS Objects Types Samples</a></li>
+        <li><a href="xxx.html">Step 2 JS </a></li>
+        <li><a href="zzz.html">Step 3 Kalıtım</a></li>
+    </ul>
+
+    <h1>Step 3 JS Inheritance</h1>
+    <div id="div00">
+        Bahadır ŞENYAYLA
+    </div>
+</body>
+</html>
