@@ -5,8 +5,9 @@ function okClick(){
     alert("Ok click");
 }
 
-
+document.cookie = 'position={"data":1,"row":2}' ;
 // Another Way 
+
 // Anonymous function example
 window.onload = function() {
     var okButton = document.getElementById("btnOK2");
@@ -115,3 +116,6 @@ function sum(x, y, ...more) {
     
 sum(5, 5, 5);
 sum(6, 6, 6, 6, 6);
+
+
+console.log("Cookie Data:" + document.cookie);
