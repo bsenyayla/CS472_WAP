@@ -1,28 +1,69 @@
 "use strict"
+const censusForm=document.getElementById("frmPatient");
+
 
 window.onload=function(){
-    const censusForm=document.getElementById("frmPatient");
+    const objPatient=new Patient("frmPatient");    
 
     censusForm.addEventListener("submit",function(event){
         event.preventDefault();       
-        const $newRow = `<tr><td>${document.getElementById("patientIdNumber").value}</td>
-                            <td>${document.getElementById("firstName").value}</td>
-                            <td>${document.getElementById("middleInitials").value}   </td>
-                            <td>${document.getElementById("lastName").value}</td>
-                            <td>${document.getElementById("dateOfBirth").value}</td>
-                            <td>${document.getElementById("ddlDepartment").value}</td>
-                            <td>${censusForm.elements["radioIsOutPatient"].value}</td></tr>`;
-        
-        $("#tbodyPatientsList").append($newRow);        
-        censusForm.reset();
+        objPatient.AddNewPostedData();
     });
-
-
-
 
     const btnLoadData=document.getElementById("btnLoadData");
     btnLoadData.addEventListener("click",function(event){
-        const patientType ={
+        objPatient.FillData();
+    });
+
+}
+
+
+ class Patient {
+    
+    constructor(formName){
+        this.form=document.getElementById(formName);
+    }
+    
+    doJob(){
+        console.log("OKKK");
+    }
+
+    AddNewPostedData(){
+        const $newRow = `<tr><td>${document.getElementById("patientIdNumber").value}</td>
+        <td>${document.getElementById("firstName").value}</td>
+        <td>${document.getElementById("middleInitials").value}   </td>
+        <td>${document.getElementById("lastName").value}</td>
+        <td>${document.getElementById("dateOfBirth").value}</td>
+        <td>${document.getElementById("ddlDepartment").value}</td>
+        <td>${censusForm.elements["radioIsOutPatient"].value}</td></tr>`;
+        $("#tbodyPatientsList").append($newRow);        
+        this.form.reset();
+    }
+
+    FillData(){
+        const dataArr=[
+            ["EP-001-123456","Bahadır","","Şenyayla","2011-01-10","Ear, Nose and Throat","Yes"],
+            ["EP-002-123456","Obinna" ,"","Kalu","2011-01-10","Cardiology","Yes"],
+            ["EP-003-123456","Anna"   ,"","Red","2011-01-10","Primary Care","No"],
+            ["EP-004-123456","John"   ,"","Blue","2011-01-10","Cardiology","No"]
+        ];
+
+        for(let dr of dataArr)
+        {
+            const $newRow = `<tr><td>${dr[0]}</td>
+            <td>${dr[1]}</td>
+            <td>${dr[2]}</td>
+            <td>${dr[3]}</td>
+            <td>${dr[4]}</td>
+            <td>${dr[5]}</td>
+            <td>${dr[6]}</td></tr>`;
+            $("#tbodyPatientsList").append($newRow);              
+        }
+    }
+}
+
+/*
+const patientType ={
             patientIdNumber:"",
             firstName:"",
             middleInitials:"",
@@ -56,21 +97,4 @@ window.onload=function(){
 
         const emp2=Object.create(patientType)
         emp2.filla(1,"FirstName","","last",new Date(),1,1);
-        
-        
-        alert(emp.firstName);
-
-
-
-    });
-
-}
-
-/*
-
-const persons = [
-    new Person("Ana Smith", new Date(1998,11,15)),
-    new Person("Bob June", new Date(1945,10,16)),
-    new Person("Carlos Slim Helu", new Date(1976,9,24))
-];
 */
