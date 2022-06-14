@@ -46,6 +46,8 @@ export class Person {
    return [year, month, day].join('-');
 }
 
+
+
 /*
 console.log("ClassPerson =========================================================================") ;
 var nt=new Person("bahadır");

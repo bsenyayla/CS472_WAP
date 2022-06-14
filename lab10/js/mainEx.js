@@ -1,5 +1,6 @@
 "use strict";
 import { Person } from "./model/personEx.js";
+import { Employee } from "./model/employeeEx.js";
 
 console.log("MainEx.js =======================================================================");
 
@@ -14,6 +15,8 @@ for(let vl of persons){
     vl.showInfo();
 }
 
+const emp=new Employee("Jim Hanson",new Date(2001,1,1),245990.00,new Date(2001,1,2));
+emp.doJob("Software Engineer");
 //OR
 /*
 persons.forEach(p=> {
