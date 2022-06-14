@@ -10,6 +10,8 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js" integrity="sha256-66f6uQTQkvHF8jpniLWJjnteEfmQaC/tATFew/nTBA8=" crossorigin="anonymous"></script>
+    
+    <script defer src="js/app.js"></script>
 </head>
 <body>
     <header>
@@ -46,7 +48,7 @@
                 Patients Registration
             </h3>
             <hr>
-            <form>
+            <form id="frmPatient" name="frmPatient" action="#" method="get">
                 <fieldset>
                     <legend></legend>
                     <div class="row">
@@ -124,7 +126,8 @@
                             <!-- <input style="vertical-align: middle;" type="checkbox" name="chkShowOutPatients" id="chkShowOutPatients" value="showOutPatients">
 				            <label style="vertical-align: baseline;" for="chkShowOutPatients">Out-Patients only</label> -->
                         </div>
-                        <div style="text-align: right;" class="col-md-6">
+                        <div style="text-align: right;" class="col-md-12">
+                            <button style="margin-left: 1em; padding: .5em 4em;" id="btnLoadData" type="button" class="btn btn-primary btn-inline">Load Test Data</button>
                             <button style="padding: .5em 4em;" id="btnReset" type="reset" class="btn btn-secondary btn-inline">Reset</button>
                             <button style="margin-left: 1em; padding: .5em 4em;" id="btnRegisterPatient" type="submit" class="btn btn-primary btn-inline">Register Patient</button>
                         </div>
@@ -157,7 +160,9 @@
                             <th scope="col">Out-patient?</th>
                         </tr>
                     </thead>
-                    <tbody id="tbodyPatientsList"></tbody>
+                    <tbody id="tbodyPatientsList">
+
+                    </tbody>
                 </table>
             </div>
         </div>
