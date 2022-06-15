@@ -23,11 +23,11 @@ function okayClick() {
 //Functions can be assigned to variables
 const myfunc = function(a, b) {
     return a * b;
-    };
+};
 
-    const myfuncX = function(a, b) {
-        return a + b;
-        };
+const myfuncX = function(a, b) {
+    return a + b;
+};
     
 
 console.log("Sonuc:" + myfunc(1,2));    
@@ -54,7 +54,7 @@ const malert=getAlert("ben geldim");
 
 //Arrow Function 
 const carp=(a,b,c)=> {
-return a * b* c;
+    return a * b* c;
 };
 
 console.log("ArrowFunc:" + carp(1,2,3));
@@ -65,6 +65,7 @@ const a = [
     "Lithium",
     "Beryllium"
     ];
+    
     const a2 = a.map(function(s) { return s.length });
     console.log("a2: " + a2);
     const a3 = a.map(s => s.length);
@@ -80,10 +81,11 @@ const things = {
     'a': 97,
     'b': 98,
     'c': 99
-    };
-    for (const key in things) {
+};
+
+for (const key in things) {
     console.log(key + ', ' + things[key]);
-    }
+}
 
 const thingss = [97,98,99];
 for (const key in thingss) { //bu bütün özelliklerini basar

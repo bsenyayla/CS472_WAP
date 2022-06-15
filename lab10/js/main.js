@@ -1,6 +1,7 @@
 "use strict";
 import { Person } from "./model/person.js";
 import { Employee } from "./model/employee.js";
+
 const persons = [
     new Person("Ana Smith", new Date(1998,11,15)),
     new Person("Bob June", new Date(1945,10,16)),
