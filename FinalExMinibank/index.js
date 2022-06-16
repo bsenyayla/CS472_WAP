@@ -38,7 +38,7 @@ app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, "views", "404.html"));
 });
 
-const PORT_NUMBER = 9000;
+const PORT_NUMBER = 9001;
 
 app.listen(PORT_NUMBER, () => {
     console.log(`Server is running on port ${PORT_NUMBER}`);

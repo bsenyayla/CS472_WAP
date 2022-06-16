@@ -5,6 +5,8 @@ const dbConnectionMgr = require("../dbconnectionmgr");
 //TODO Use ES6 class syntax
 const accountDAO = (function() {
 
+
+
     // const getAccounts = function() {
     //     const products = [];
     //     products.push(new Product(1001, "Apple iPhone15", 1700));
@@ -19,6 +21,7 @@ const accountDAO = (function() {
     const getAccounts = async function() {
         const qryStrGetAccounts = "SELECT * FROM `bank-db`.accounts";
         try {
+            
             const dbConnection = dbConnectionMgr.getConnection();
             const [accounts] = await dbConnection.promise().query(qryStrGetAccounts);
             return accounts;

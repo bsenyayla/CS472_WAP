@@ -13,8 +13,13 @@ const dbConectionMgr = (function(dbConfig) {
     const getConnection = function() {
         return mysql.createPool(dbConfig);
     }
+
+    const TestDb = function() {
+        return "true";
+    }
     return {
-        getConnection: getConnection
+        getConnection: getConnection,
+        TestDb:TestDb
     }
 })(dbConfig);
 

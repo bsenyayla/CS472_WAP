@@ -26,7 +26,8 @@ const dataStore = (function () {
 
   return {
     getData: getData,
-    addData: addData,
+    addData: addData
+    
   };
 })();
 

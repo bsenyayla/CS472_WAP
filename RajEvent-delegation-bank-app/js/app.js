@@ -1,7 +1,3 @@
-/**
- * @author: Raj Kumar Thapa
- * March 17 2022
- */
  "use strict";
  $(document).ready(function(){
      const articleList = $('#articlesList');

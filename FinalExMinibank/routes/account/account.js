@@ -8,12 +8,15 @@ const path = require("path");
 const accountRouter = express.Router();
 // const product = require("../../model/product");
 const accountController = require("../../controller/accountController");
+const bsAccount = require("../../businessLayer/account");
 
 // Define routes for product pages
 accountRouter.get("/list", async (req, res, next) => {
     console.log(`Presenting list of accounts page`);
-    const accounts = await accountController.getAccounts(req, res);
+    //const accounts = await accountController.getAccounts(req, res);
+    const accounts = await bsAccount.getAccounts(req, res);
     console.log(accounts);
+
     res.locals = {accounts: accounts};
     res.render("account");
     // res.render("product-list", {products: products});
