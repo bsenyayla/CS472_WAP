@@ -1,9 +1,3 @@
-/**
- * minibankapp.js
- * 
- * @author okalu
- * @since 2022-03-10
- */
 "use strict";
 
 import { Account } from "./model/account.js";

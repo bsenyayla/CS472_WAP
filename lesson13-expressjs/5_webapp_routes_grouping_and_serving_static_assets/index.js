@@ -1,11 +1,4 @@
-/**
- * index.js
- * 
- * A demo express.js webapp
- * 
- * @author OKalu
- * @since 2022-03-12
- */
+
 
 "use strict";
 

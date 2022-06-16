@@ -1,8 +1,4 @@
-/**
- * main.js
- * @author okalu
- * @since 2022-05-20
- */
+
 "use strict";
 
 const findOdds = function(array) {

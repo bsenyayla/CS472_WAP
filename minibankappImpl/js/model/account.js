@@ -1,9 +1,3 @@
-/**
- * account.js
- * 
- * @author okalu
- * @since 2022-03-10
- */
 "use strict";
 
 export class Account {
