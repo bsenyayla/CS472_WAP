@@ -1,7 +1,23 @@
+console.log("Bahadır");
+
 // #1 function to find out max between 2 numbers
 function max(a, b){
-return (a > b) ? a : b;
+  return (a > b) ? a : b;
 }
+
+
+const cars = ["Saab", "Volvo", "BMW"];
+
+for (let i = 0; i < cars.length; i++) {
+  console.log("oo=>" + cars[i]);
+}
+
+for(let i=0; i < cars.length;i++){
+  console.log("yummu=" + cars[i])  ;
+}
+
+
+
 const a = 3;
 const b = 8;
 console.log("Max between 2 numbers: " + a + " and " + b + " is " + max(a,b));
